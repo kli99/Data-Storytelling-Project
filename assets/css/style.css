@@ -1,0 +1,138 @@
+h3 {
+    align-self: left;
+    color: #49BCB9;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-block-start: 20px;
+    margin-block-end: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h5 {
+    align-content: center;
+    color: #49BCB9;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 120px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* .navbar {
+    padding: 10px;
+    background: #5191fd;
+} */
+
+p {
+    color: lightslategray;
+    font-size: 20px;
+    font-family: verdana;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+}
+
+body {
+    background-color: gainsboro;
+}
+
+.box {
+    align-content: flex-end;
+    padding: 20px;
+    color: #fff;
+    background: white;
+}
+
+.active {
+    background-color: #49BCB9;
+    block-size: 40px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.li a:hover,
+.dropdown-menu:hover {
+    background-color: lightslategray;
+    transition: .5s;
+}
+
+.container-fluid {
+    margin-bottom: 10px;
+    margin-block-end: 10px;
+}
+
+#temppng {
+    width: 550px;
+    height: 450px;
+    padding: 100px;
+}
+
+#imagecenter {
+    width: 550px;
+    height: 450px;
+    padding: 50px;
+}
+
+#logo {
+    /* Box-model */
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* Positioning */
+    margin-left: 50px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    /* Typography */
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    /* Visual */
+    background: #4aaaa5;
+}
+
+.navbar-container {
+    background-color: #fff !important;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    width: 100%
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-header {
+        background-color: #4aaaa5 !important;
+        width: 100%;
+    }
+    .navbar-container {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 20px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        width: 100%
+    }
+    #logo {
+        width: 100%;
+        /* Box-model */
+        height: 50px;
+        padding-top: 0px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        margin-top: 20px;
+        /* Positioning */
+        margin-left: 0;
+        font-family: Georgia, Times, "Times New Roman", serif;
+        /* Typography */
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        /* Visual */
+        background: #4aaaa5;
+    }
+}
