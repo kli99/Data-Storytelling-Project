@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title> Data-Storytelling-Project</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-inverse">
+            <div class="row navbar-container">
+                <div class="navbar-header">
+                    <a id="logo" href="index.html"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Main Course</a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="borough.html">Top 5 Resaurants In Each Borough</a>
+                                <a class="dropdown-item" href="most.html">Most Grade A Restaurants Borough</a>
+                                <a class="dropdown-item" href="cuisine.html">Top 5 Grade A Cuisines</a>
+
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="map.html">Desserts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="hero text-center">
+            <h1>NYC Restaurants</h1>
+            <!-- <p></p> -->
+        </div>
+
+        <hr>
+        <br>
+        <div class="container-fluid">
+
+            <div class="row margin-top-50">
+                <!-- <div class="col-md-10"> -->
+                <!-- empty columns to space out the alignment by add padding with appropriate px range -->
+                <div class="box">
+                    <div class="header ">
+                        <!-- Header -->
+                        <h3> The Grade A Cuisines </h3>
+                        <hr class="light ">
+                    </div>
+
+                    <!-- <div class="col-md-10 "> -->
+                    <!-- add cloudymap at the end of closing tag will make the image clickable -->
+                    <!-- <a target="_blank " href="temp.html ">
+                            <img src="assets/images/Fig1.png " class="left_shown rounded float-left " alt="chart">
+                        </a>
+                    </div> -->
+                    <div id="bar-chart"></div>
+
+                    <p>Most Grade A Restaurants Across NYC etc etc etc eafejafjekfklefklajfklewjfklewajfklejklfewjaklfjewaklfjewklfjelkajfkelwajfklewjfkleajfkleajfklejakfljaewlfjeawklfjewaklfjeaklfjaekljflka </p>
+
+
+                    <p>Analysis explanation</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+
+    <br>
+
+    <footer class="footer">
+        <span class="bottom">NYC Restaurants @Data-Storytelling-Project</span>
+    </footer>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+
+    <!-- D3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
+
+    <script src="templates/js/app.js"></script>
+
+
+</body>
+
+</html>
