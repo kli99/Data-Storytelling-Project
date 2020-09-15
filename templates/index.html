@@ -24,6 +24,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <div class="wrapper">
         <nav class="navbar navbar-expand-lg navbar-inverse">
             <div class="row navbar-container">
@@ -121,12 +122,112 @@
                                         <img src="assets/images/Fig3.png " class="img-fluid " alt="Cloud "></a>
 
                                 </div>
+=======
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="row navbar-container">
+            <div class="navbar-header">
+                <a id="logo" href="index.html">Entrée</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Main Course</a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="borough.html">Top 5 Resaurants In Each Borough</a>
+                            <a class="dropdown-item" href="most.html">Most Grade A Restaurants Borough</a>
+                            <a class="dropdown-item" href="cuisine.html">Top 5 Grade A Cuisines</a>
+
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="map.html">Desserts</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="data.html">Ingredients</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <hr>
+    <br>
+    <div class="container-fluid">
+        <div class=" row ">
+            <!-- empty columns to space out the alignment by add padding with appropriate px range -->
+            <div class="col-md-2"></div>
+            <div class="col-md-5 ">
+                <div class="box ">
+                    <div class="header ">
+                        <!-- Header -->
+                        <h3> NYC Restaurants</h3>
+                        <hr class="light ">
+                    </div>
+
+                    <div class="col-2 ">
+                        <!-- add cloudymap at the end of closing tag will make the image clickable -->
+                        <a target="_blank " href="temp.html ">
+                            <img src="assets/images/Fig1.png " class="left_shown rounded float-left " alt="Cloudy Map ">
+                        </a>
+                    </div>
+
+                    <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeaherMap API to assemble a dataset on over 500 cities.</p>
+
+
+                    <p>After assemblinh the dataset, we used Matplotlib to plot various aspects of the weather vs latitude. Factors we looked at included: temperature, cloudiness, wind speed and humidity. This site provides the source data and visualizations
+                        created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 ">
+                <div class="box ">
+                    <div class="header ">
+                        <h3>Visualizations</h3>
+                        <hr class="light ">
+                    </div>
+
+                    <div class="content-fluid " style="margin-block-start:20px ">
+
+                        <div class="row padding ">
+                            <div class="col-6 ">
+                                <a href="temp.html ">
+                                    <img src="assets/images/Fig1.png " class="img-fluid " alt="City Latitude vs. Max Temperature "></a>
+
+                            </div>
+                            <div class="col-6 ">
+                                <a href="humid.html ">
+                                    <img src="assets/images/Fig2.png " class="img-fluid " alt="Humidity "></a>
+                            </div>
+
+                            <div class="col-6 ">
+                                <a href="wind.html ">
+                                    <img src="assets/images/Fig4.png " class="img-fluid " alt="Wind "></a>
+                            </div>
+                            <div class="col-6 ">
+                                <a href="cloud.html ">
+                                    <img src="assets/images/Fig3.png " class="img-fluid " alt="Cloud "></a>
+
+>>>>>>> 48567c6ed163b3c7b7ddc40b5e10b772c38a73fe
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
 
         <br>
         <div class="container-fluid">
@@ -159,6 +260,39 @@
         </footer>
 
     </div>
+=======
+    </div>
+
+    <br>
+    <div class="container-fluid">
+        <div class=" row ">
+            <!-- empty columns to space out the alignment by add padding with appropriate px range -->
+            <div class="col-md-2"></div>
+            <div class="col-md-9 ">
+                <div class="box ">
+                    <div class="header ">
+                        <!-- Header -->
+                        <h3> Restaurants City Map</h3>
+                        <hr class="light ">
+                    </div>
+
+
+
+                    <p> Based on boroughs/zipcode analysis.</p>
+
+
+                    <div id="map-id"></div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+>>>>>>> 48567c6ed163b3c7b7ddc40b5e10b772c38a73fe
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
 
     <!-- D3 -->
@@ -170,7 +304,10 @@
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
 
+<<<<<<< HEAD
     <script src="templates/js/app.js"></script>
+=======
+>>>>>>> 48567c6ed163b3c7b7ddc40b5e10b772c38a73fe
 
 
 </body>
