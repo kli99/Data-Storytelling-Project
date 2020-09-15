@@ -13,8 +13,6 @@ var layers = {
   C_RATING: new L.LayerGroup()
 };
 
-
-
 // Create the map with our layers
 // map_id is the div in the HTML
 var map = L.map("map-id", {
@@ -28,8 +26,6 @@ var map = L.map("map-id", {
   ]
 });
 
-
-
 // Add our 'lightmap' tile layer to the map
 lightmap.addTo(map);
 
@@ -39,8 +35,6 @@ var overlays = {
   "B Rating": layers.B_RATING,
   "C Rating": layers.C_RATING
 };
-
-
 
 // Create a control for our layers, add our overlay layers to it
 L.control.layers(null, overlays).addTo(map);
@@ -59,6 +53,7 @@ info.onAdd = function() {
 info.addTo(map);
 
 // Initialize an object containing icons for each layer group
+// Having a hard time with the icons
 var icons = {
   A_RATING: L.ExtraMarkers.icon({
     icon: "checkmark-done-outline",
@@ -80,14 +75,10 @@ var icons = {
   })
 };
 
-
-
-
-
-
-// When the first API call is complete, perform another call to the Citi Bike Station Status endpoint
+// Once the local JSON file is called, perform the anonymous function
 d3.json('restaurantsNYC_italian_mexican.json', function(restaurantsData) {
   var restaurantInfo = restaurantsData;
+  // // Console.log() the restaurant names to test connection
   // for (var i = 0; i < restaurantInfo.length; i++) {
   //   var restaurant = Object.assign({}, restaurantInfo[i]);
   //   console.log(restaurant.DBA)
@@ -100,29 +91,28 @@ d3.json('restaurantsNYC_italian_mexican.json', function(restaurantsData) {
     C_RATING: 0
   };
 
-  // Initialize a stationStatusCode, which will be used as a key to access the appropriate layers, icons, and station count for layer group
+  // Initialize a restaurantStatusCode, which will be used as a key to access the appropriate layers, icons, and restaurant count for layer group
   var restaurantStatusCode;
 
-  // Loop through the stations (they're the same size and have partially matching data)
+  // Loop through the restaurants 
   for (var i = 0; i < restaurantInfo.length; i++) {
 
-    // Create a new station object with properties of both station objects
+    // Create a new restaurant object with properties from the list of arrays
     var restaurant = Object.assign({}, restaurantInfo[i]);
-    // If a station is listed but not installed, it's coming soon
+    // A Grade
     if (restaurant.GRADE == "A") {
       restaurantStatusCode = "A_RATING";
     }
-    // If a station has no bikes available, it's empty
-    // note the "!"
+    // B Grade
     else if (restaurant.GRADE == "B") {
       restaurantStatusCode = "B_RATING";
     }
-    // Otherwise the station is normal
+    // C grade
     else {
       restaurantStatusCode = "C_RATING";
     }
 
-    // Update the station count
+    // Update the restaurant count
     restaurantCount[restaurantStatusCode]++;
     // Create a new marker with the appropriate icon and coordinates
     var newMarker = L.marker([restaurant.Latitude, restaurant.Longitude], {
@@ -143,6 +133,7 @@ d3.json('restaurantsNYC_italian_mexican.json', function(restaurantsData) {
 // Update the legend's innerHTML with the last updated time and station count
 function updateLegend(restaurantCount) {
   document.querySelector(".legend").innerHTML = [
+    // // Code from class exercise below
     // "<p>Updated: " + moment.unix(time).format("h:mm:ss A") + "</p>",
     // "<p class='out-of-order'>Out of Order Stations: " + stationCount.OUT_OF_ORDER + "</p>",
     "<p class='a-ratings'>'A' Food Safety Ratings: " + restaurantCount.A_RATING + "</p>",
