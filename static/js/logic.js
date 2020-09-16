@@ -34,7 +34,7 @@ function createMap(resLoc) {
 function createMarkers(response) {
 
     // Pull the "stations" property off of response.data
-    var locations = response.data.locations;
+    var stations = response.data.stations;
 
     // Initialize an array to hold bike markers
     var bikeMarkers = [];

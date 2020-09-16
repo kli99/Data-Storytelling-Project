@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="kekestyle.css">
+    <link rel="stylesheet" href="static/styles.css">
 
 </head>
 
@@ -28,7 +28,7 @@
         <nav class="navbar navbar-expand-lg navbar-inverse">
             <div class="row navbar-container">
                 <div class="navbar-header">
-                    <a id="logo" href="index.html"></a>
+                    <a id="logo" href="/">en·trée</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -41,15 +41,15 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Main Course</a>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="borough.html">Top 5 Resaurants In Each Borough</a>
-                                <a class="dropdown-item" href="most.html">Most Grade A Restaurants Borough</a>
-                                <a class="dropdown-item" href="cuisine.html">Top 5 Grade A Cuisines</a>
+                                <a class="dropdown-item" href="/borough">Top 5 Resaurants In Each Borough</a>
+                                <a class="dropdown-item" href="/most">Most Grade A Restaurants Borough</a>
+                                <a class="dropdown-item" href="/cuisine">Top 5 Grade A Cuisines</a>
 
                             </div>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="map.html">Desserts</a>
+                            <a class="nav-link" href="/map">Desserts</a>
                         </li>
                     </ul>
                 </div>
@@ -112,7 +112,14 @@
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
 
-    <script src="templates/js/app.js"></script>
+
+
+    <!-- Config -->
+    <script type="text/javascript" src="static/js/config.js"></script>
+
+    <!-- JS -->
+    <script type="text/javascript" src="static/js/logic.js"></script>
+
 
 
 </body>
