@@ -34,7 +34,7 @@ def data():
     for restaurant in dataset:
         newlist= {}
         for k,v in restaurant.items():
-            #create a dict to call and append the list with the dict            
+            #create a dict to call and append the list wicth the dict            
             if(k != '_id'):
                 newlist[k]= v
         dataRes.append(newlist)

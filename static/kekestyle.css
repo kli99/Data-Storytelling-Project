@@ -4,7 +4,7 @@
     padding: 20px;
     margin: 0;
     background: white;
-    background-image: url("../templates/header.jpg");
+    background-image: url("../static/header.jpg");
     background-attachment: fixed;
     background-position: bottom center;
     background-size: cover;
