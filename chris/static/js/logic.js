@@ -21,8 +21,8 @@ var map = L.map("map-id", {
   layers: [
     // the layers that will show on load
     layers.A_RATING,
-    layers.B_RATING,
-    layers.C_RATING
+    // layers.B_RATING,
+    // layers.C_RATING
   ]
 });
 
@@ -76,7 +76,7 @@ var icons = {
 };
 
 // Once the local JSON file is called, perform the anonymous function
-d3.json('restaurantsNYC_italian_mexican.json', function(restaurantsData) {
+d3.json('restaurantsNYC_expanded.json', function(restaurantsData) {
   var restaurantInfo = restaurantsData;
   // // Console.log() the restaurant names to test connection
   // for (var i = 0; i < restaurantInfo.length; i++) {
