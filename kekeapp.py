@@ -29,16 +29,26 @@ def map():
     # Return template and data
     return render_template("map.html")
 
-
-    # Route to render most.html template using data from Mongo
-@app.route("/most")
-def most():
+    # Route to render map.html template using data from Mongo
+@app.route("/map1")
+def map1():
 
     # Find one record of data from the mongo database
     # data = mongo.db.data.find()
 
     # Return template and data
-    return render_template("most.html")
+    return render_template("map1.html")
+
+
+#     # Route to render most.html template using data from Mongo
+# @app.route("/most")
+# def most():
+
+#     # Find one record of data from the mongo database
+#     # data = mongo.db.data.find()
+
+#     # Return template and data
+#     return render_template("most.html")
 
 
     # Route to render cuisine.html template using data from Mongo
@@ -53,14 +63,25 @@ def cuisine():
 
 
 
-@app.route("/borough")
-def borough():
+# @app.route("/borough")
+# def borough():
 
-    # Find one record of data from the mongo database
-    # data = mongo.db.data.find()
+#     # Find one record of data from the mongo database
+#     # data = mongo.db.data.find()
 
-    # Return template and data
-    return render_template("borough.html")
+#     # Return template and data
+#     return render_template("borough.html")
+
+
+
+# @app.route("/test")
+# def test():
+
+#     # Find one record of data from the mongo database
+#     # data = mongo.db.data.find()
+
+#     # Return template and data
+#     return render_template("test.html")
 
 # Route that will trigger the scrape function by import scrape_mars
 @app.route("/data")

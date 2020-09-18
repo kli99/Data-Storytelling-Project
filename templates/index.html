@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en-us">
+​
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-
+    <meta http-equiv="x-ua-compatible" content="ie=edge"> ​
     <title> Data-Storytelling-Project</title>
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    ​
+    <!-- Font Awesome Icons
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css"> -->
+    <!-- Theme style
+    <link rel="stylesheet" href="dist/css/adminlte.min.css"> -->
     <!-- Google Font: Source Sans Pro -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet"> ​
     <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    ​
+    <!-- d3 JavaScript -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/styles.css">
-
+    <link rel="stylesheet" href="static/styles.css"> ​
 </head>
+​
 
 <body>
     <div class="wrapper">
@@ -34,22 +37,20 @@
                 </button>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
+                    ​
                     <ul class="navbar-nav ml-auto">
-
+                        ​
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Main Course</a>
-
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Main Course</a> ​
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/borough">Top 5 Resaurants In Each Borough</a>
-                                <a class="dropdown-item" href="/most">Most Grade A Restaurants Borough</a>
-                                <a class="dropdown-item" href="/cuisine">Top 5 Grade A Cuisines</a>
-
+                                <a class="dropdown-item" href="/map">City Restaurants</a>
+                                <a class="dropdown-item" href="/map1">Grade A Cuisines</a>
+                                <a class="dropdown-item" href="/cuisine">Average Scores for Each Cuisines</a>
                             </div>
                         </li>
-
+                        ​
                         <li class="nav-item">
-                            <a class="nav-link" href="/map">Desserts</a>
+                            <a class="nav-link" href="/data">Desserts</a>
                         </li>
                     </ul>
                 </div>
@@ -59,67 +60,62 @@
             <h1>NYC Restaurants</h1>
             <!-- <p></p> -->
         </div>
-
-
-
+        ​ ​ ​
         <hr>
         <br>
         <div class="container-fluid">
             <div class=" row ">
                 <!-- empty columns to space out the alignment by add padding with appropriate px range -->
-                <div class="col-md-2"></div>
-                <div class="col-md-5 ">
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
                     <div class="box ">
                         <div class="header ">
                             <!-- Header -->
                             <h3> Overviews</h3>
                             <hr class="light ">
                         </div>
-
+                        ​
                         <div class="col-2 ">
                             <!-- add cloudymap at the end of closing tag will make the image clickable -->
-                            <a target="_blank " href="temp.html ">
-                                <img src="assets/images/Fig1.png " class="left_shown rounded float-left " alt="Cloudy Map ">
+                            <a target="_blank " href="https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j/data">
+                                <img src="static/nyc.jpg" class="left_shown rounded float-left " alt="API">
                             </a>
                         </div>
-
-                        <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeaherMap API to assemble a dataset on over 500 cities.</p>
-
-
-                        <p>After assemblinh the dataset, we used Matplotlib to plot various aspects of the weather vs latitude. Factors we looked at included: temperature, cloudiness, wind speed and humidity. This site provides the source data and visualizations
-                            created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+                        ​
+                        <p> The purpose of this project was to analyze restaurants inspection grades with different cuisines of New York City. To accomplish this analysis, we first pulled data from NYC Open Data and then built a flask API route for the dataset
+                            exported from MongoDB. This comprehensive DOHMH dataset includes restaurant name, contact information, address, borough, zip code, as well as cuisine type, food rating, food safety letter grade, inspection date and violations.This
+                            amount of data provide many options for interactive visualizations</p>
+                        ​ ​
+                        <p>After assembling the dataset, we used D3 and Leaflet libraries from JavaScript to illustrate various aspects of the restaurants inspection scores/grades along with locations, cuisines options, etcs. Factors we looked at included:
+                            inspection grades, actual scores, locations and cuisines. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
                     </div>
                 </div>
-
-
-                <div class="col-md-3 ">
-                    <div class="box ">
-                        <div class="header ">
+                ​ ​
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="header">
                             <h3>Visualizations</h3>
-                            <hr class="light ">
+                            <hr class="light">
                         </div>
-
+                        ​
                         <div class="content-fluid " style="margin-block-start:20px ">
-
-                            <div class="row padding ">
-                                <div class="col-6 ">
-                                    <a href="/map ">
-                                        <img src="assets/images/Fig1.png " class="img-fluid " alt="City Latitude vs. Max Temperature "></a>
-
-                                </div>
-                                <div class="col-6 ">
-                                    <a href="/borough>
-                                        <img src=" assets/images/Fig5.png " class="img-fluid " alt="Humidity "></a>
+                            ​
+                            <div class="row padding">
+                                <div class="col-6">
+                                    <a href="/map">
+                                        <img src="static/nycmap.jpg" class="img-fluid" alt="Map"></a>
+                                    ​
                                 </div>
 
-                                <div class="col-6 ">
-                                    <a href="/cuisine ">
-                                        <img src="assets/images/Fig4.png " class="img-fluid " alt="Wind "></a>
+                                <div class="col-6">
+                                    <a href="/map1">
+                                        <img src="static/food.jpg" class="img-fluid" alt="Map"></a>
+                                    ​
                                 </div>
-                                <div class="col-6 ">
-                                    <a href="/most ">
-                                        <img src="assets/images/Fig3.png " class="img-fluid " alt="Cloud "></a>
 
+                                <div class="col-10">
+                                    <a href="/cuisine">
+                                        <img src="static/cuisine.jpg" class="img-fluid" alt="Bar"></a>
                                 </div>
                             </div>
                         </div>
@@ -127,56 +123,57 @@
                 </div>
             </div>
         </div>
-
-        <br>
-        <div class="container-fluid ">
-            <div class=" row ">
-                <!-- empty columns to space out the alignment by add padding with appropriate px range -->
-                <div class="col-md-2 "></div>
-                <div class="col-md-9 ">
-                    <div class="box ">
-                        <div class="header ">
-                            <!-- Header -->
-                            <h3> Restaurants City Map</h3>
-                            <hr class="light ">
-                        </div>
-
-
-
-                        <p> Based on boroughs/zipcode analysis.</p>
-
-
-                        <div id="map "></div>
-
-
+    </div>
+    ​
+    <br>
+    <!-- <div class="container-fluid ">
+        <div class=" row "> -->
+    <!-- empty columns to space out the alignment by add padding with appropriate px range -->
+    <!-- <div class="col-md-2 "></div>
+            <div class="col-md-9 ">
+                <div class="box ">
+                    <div class="header "> -->
+    <!-- Header -->
+    <!-- <h3> Restaurants City Map</h3>
+                        <hr class="light ">
                     </div>
+                    ​ ​ ​
+                    <p> Based on boroughs/zipcode analysis.</p>
+                    ​
+                    <div id="map-id"></div>​ ​ ​
                 </div>
+                ​
+
+
             </div>
         </div>
-
-        <footer class="footer ">
-            <span class="bottom ">NYC Restaurants @Data-Storytelling-Project</span>
-        </footer>
-
+    </div> -->
+    ​
+    <footer class="footer ">
+        <span class="bottom ">NYC Restaurants @Data-Storytelling-Project</span>
+    </footer>
+    ​
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
-
+    ​
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    ​
     <!-- D3 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    ​
     <!-- Bootstrap -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
-
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    ​
     <!-- Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js " integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=" "></script>
-
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=" "></script>
+    ​
     <!-- Config -->
-    <script type="text/javascript " src="static/js/config.js "></script>
-
+    <script type="text/javascript " src="static/js/config.js"></script>
+    ​
     <!-- JS -->
-    <script type="text/javascript " src="static/js/logic.js "></script>
-
+    <script type="text/javascript " src="static/js/logic.js"></script>
+    <!-- <script type="text/javascript " src="static/js/logic1.js "></script> -->
+    ​
 </body>
+​
 
 </html>
