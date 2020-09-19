@@ -30,14 +30,14 @@ def map():
     return render_template("map.html")
 
     # Route to render map.html template using data from Mongo
-@app.route("/map1")
-def map1():
+@app.route("/mapcuisine")
+def mapcuisine():
 
     # Find one record of data from the mongo database
     # data = mongo.db.data.find()
 
     # Return template and data
-    return render_template("map1.html")
+    return render_template("mapcuisine.html")
 
 
 #     # Route to render most.html template using data from Mongo

@@ -1,6 +1,9 @@
+/* map.html and mapcuisine.html setting */
+
 html,
 body,
-#map-id {
+#map-id,
+#map1-id {
     height: 100%;
     padding: 0;
     margin: 0;

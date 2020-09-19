@@ -88,9 +88,8 @@ img {
 }
 
 html,
-body,
-#map-id {
-    height: 50%;
+body {
+    height: 100%;
     padding: 0;
     margin: 0;
     background-color: black;
@@ -99,7 +98,7 @@ body,
 .box {
     align-content: flex-end;
     padding: 60px;
-    color: #fff;
+    color: black;
     background: white;
 }
 
@@ -175,6 +174,23 @@ body,
     color: #BEBEBE !important;
 }
 
+
+/* Bar chart for cuisine.html */
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.bar {
+    fill: orange;
+}
+
+.bar:hover {
+    fill: green;
+}
+
 @media screen and (max-width: 600px) {
     .navbar-header {
         background-color: #D4AE7F !important;
@@ -205,5 +221,14 @@ body,
         color: #fff;
         /* Visual */
         background: #D4AE7F;
+    }
+    .image-fluid {
+        width: 200px;
+        height: 100px;
+    }
+    img {
+        width: 150px;
+        height: 75px;
+        padding: 5px;
     }
 }
